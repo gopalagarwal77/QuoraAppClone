@@ -22,6 +22,10 @@ public class Comment extends BaseModel{
     @OneToMany(mappedBy = "parentComment")
     private Set<Comment> replies;
 
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
+
     @ManyToMany
     @JoinTable(
             name="comment_likes",

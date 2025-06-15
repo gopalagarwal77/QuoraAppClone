@@ -21,7 +21,4 @@ public class User extends BaseModel{
 
     private Set<Tag> followedTags;
 
-    @OneToMany
-
-
 }
