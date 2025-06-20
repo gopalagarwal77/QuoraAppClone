@@ -6,6 +6,6 @@ import lombok.Data;
 public class AnswerDTO {
     private Long id;
     private String content;
-    private long userId;
+    private Long userId;
     private Long questionId;
 }

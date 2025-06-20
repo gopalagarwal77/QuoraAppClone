@@ -17,7 +17,7 @@ public class Comment extends BaseModel{
 
     @ManyToOne
     @JoinColumn(name="parent_comment_id")
-    private Comment parent_comment_id;
+    private Comment parentComment;
 
     @OneToMany(mappedBy = "parentComment")
     private Set<Comment> replies;

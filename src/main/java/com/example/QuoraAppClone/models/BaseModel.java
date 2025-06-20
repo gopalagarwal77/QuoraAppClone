@@ -12,6 +12,6 @@ public class BaseModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // This annotation is used to specify the primary key generation Strategy to be used for the entity.
-    private long id;
+    private Long id;
 
 }

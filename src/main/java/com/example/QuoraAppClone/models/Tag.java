@@ -16,5 +16,6 @@ public class Tag extends BaseModel {
 
     private Set<User> followers;
 
-    private Set<Question>
+    @ManyToMany(mappedBy = "tags")
+    private Set<Question> questions;
 }
