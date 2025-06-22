@@ -20,7 +20,7 @@ public class AnswerService {
     private QuestionRepository questionRepository;
     private UserRepository userRepository;
 
-    public AnswerService(AnswerRepository answerRepository , QuestionRepository questionRepository){
+    public AnswerService(AnswerRepository answerRepository , QuestionRepository questionRepository ,UserRepository userRepository){
         this.answerRepository=answerRepository;
         this.questionRepository=questionRepository;
         this.userRepository=userRepository;

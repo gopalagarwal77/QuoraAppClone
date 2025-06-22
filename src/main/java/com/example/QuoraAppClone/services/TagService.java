@@ -6,6 +6,7 @@ import com.example.QuoraAppClone.repositories.TagRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TagService {
@@ -20,7 +21,7 @@ public class TagService {
         return tagRepository.findAll();
     }
 
-    public Tag getTagById(long id ){
+    public Optional<Tag> getTagById(Long id ){
         return tagRepository.findById(id).orElse(null);
     }
 
