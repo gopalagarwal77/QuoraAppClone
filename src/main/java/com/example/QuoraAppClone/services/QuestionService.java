@@ -27,7 +27,7 @@ public class QuestionService {
         this.tagRepository = tagRepository;
     }
 
-    public List<Question> getAllQuestion(int offset, int limit) {
+    public List<Question> getAllQuestions(int offset, int limit) {
         return questionRepository.findAll(PageRequest.of(offset, limit)).getContent();
     }
 
@@ -57,4 +57,8 @@ public class QuestionService {
 
         return questionRepository.save(question);
     }
+
+//    public List<Question> getQuestionsByTagId(Long id){
+//        questionRepository.findQuestionByTags
+//    }
 }
