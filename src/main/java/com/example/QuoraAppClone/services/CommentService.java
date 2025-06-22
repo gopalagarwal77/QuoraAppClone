@@ -34,13 +34,14 @@ public class CommentService {
         commentRepository.deleteById(id);
     }
 
-    public Comment getCommentById(long id){
-        return commentRepository.findById(id).orElse(null);
+    public Optional<Comment> getCommentById(Long id){
+        return commentRepository.findById(id);
     }
 
-    public List<Comment> getRepliesByAnswerId(long commentId , int page , int size){
+    public List<Comment> getRepliesByAnswerId(Long commentId , int page , int size){
         return commentRepository.findByParentCommentId(commentId, PageRequest.of(page,size)).getContent();
     }
+
     public Comment createComment(CommentDTO commentDTO){
         Comment comment = new Comment();
         comment.setContent(commentDTO.getContent());
